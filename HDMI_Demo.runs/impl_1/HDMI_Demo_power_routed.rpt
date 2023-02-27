@@ -1,0 +1,182 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date             : Mon Feb 27 15:04:30 2023
+| Host             : PDArch running 64-bit Arch Linux
+| Command          : report_power -file HDMI_Demo_power_routed.rpt -pb HDMI_Demo_power_summary_routed.pb -rpx HDMI_Demo_power_routed.rpx
+| Design           : HDMI_Demo
+| Device           : xc7s15ftgb196-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.444        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.424        |
+| Device Static (W)        | 0.021        |
+| Effective TJA (C/W)      | 3.4          |
+| Max Ambient (C)          | 83.5         |
+| Junction Temperature (C) | 26.5         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.024 |       12 |       --- |             --- |
+| Slice Logic              |     0.005 |    10257 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2871 |      8000 |           35.89 |
+|   Register               |    <0.001 |     4999 |     16000 |           31.24 |
+|   LUT as Shift Register  |    <0.001 |      454 |      2400 |           18.92 |
+|   CARRY4                 |    <0.001 |      141 |      2000 |            7.05 |
+|   F7/F8 Muxes            |    <0.001 |      135 |      8000 |            1.69 |
+|   LUT as Distributed RAM |    <0.001 |       24 |      2400 |            1.00 |
+|   BUFG                   |    <0.001 |        1 |        16 |            6.25 |
+|   Others                 |     0.000 |      566 |       --- |             --- |
+| Signals                  |     0.010 |     7263 |       --- |             --- |
+| Block RAM                |     0.007 |       10 |        10 |          100.00 |
+| MMCM                     |     0.098 |        1 |         2 |           50.00 |
+| PLL                      |     0.137 |        1 |         2 |           50.00 |
+| I/O                      |     0.141 |       11 |       100 |           11.00 |
+| Static Power             |     0.021 |          |           |                 |
+| Total                    |     0.444 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.069 |       0.065 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.130 |       0.123 |      0.007 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.043 |       0.042 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 3.4                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 15.4                     |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                            | Constraint (ns) |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| CLKFBIN                                                                                    | rgb2dvi/U0/ClockGenInternal.ClockGenX/CLKFBIN                     |             6.7 |
+| PixelClkIO                                                                                 | rgb2dvi/U0/ClockGenInternal.ClockGenX/PixelClk                    |             6.7 |
+| SerialClkIO                                                                                | rgb2dvi/U0/ClockGenInternal.ClockGenX/SerialClk                   |             1.3 |
+| clk_out1_clk_wiz_0                                                                         | clk_10/inst/clk_out1_clk_wiz_0                                    |             6.7 |
+| clk_out2_clk_wiz_0                                                                         | clk_10/inst/clk_out2_clk_wiz_0                                    |           100.0 |
+| clkfbout_clk_wiz_0                                                                         | clk_10/inst/clkfbout_clk_wiz_0                                    |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
+| sys_clk_pin                                                                                | clk_100MHz                                                        |            10.0 |
+| sys_clk_pin                                                                                | clk_100MHz_IBUF_BUFG                                              |            10.0 |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------+-----------+
+| Name                                 | Power (W) |
++--------------------------------------+-----------+
+| HDMI_Demo                            |     0.424 |
+|   Driver_HDMI0                       |     0.002 |
+|   Video_Generator0                   |     0.024 |
+|     ila_color                        |     0.021 |
+|       inst                           |     0.021 |
+|   clk_10                             |     0.099 |
+|     inst                             |     0.099 |
+|   dbg_hub                            |     0.003 |
+|     inst                             |     0.003 |
+|       BSCANID.u_xsdbm_id             |     0.003 |
+|   ila_set                            |     0.006 |
+|     inst                             |     0.006 |
+|       ila_core_inst                  |     0.006 |
+|   rgb2dvi                            |     0.286 |
+|     U0                               |     0.286 |
+|       ClockGenInternal.ClockGenX     |     0.138 |
+|       ClockSerializer                |     0.034 |
+|       DataEncoders[0].DataEncoder    |     0.001 |
+|       DataEncoders[0].DataSerializer |     0.036 |
+|       DataEncoders[1].DataEncoder    |     0.001 |
+|       DataEncoders[1].DataSerializer |     0.037 |
+|       DataEncoders[2].DataEncoder    |     0.001 |
+|       DataEncoders[2].DataSerializer |     0.037 |
+|   video_coord_converter0             |     0.002 |
++--------------------------------------+-----------+
+
+

@@ -1,0 +1,405 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Feb 27 14:54:14 2023
+# Process ID: 887468
+# Current directory: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1
+# Command line: vivado -log HDMI_Demo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_Demo.tcl
+# Log file: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/HDMI_Demo.vds
+# Journal file: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/vivado.jou
+# Running On: PDArch, OS: Linux, CPU Frequency: 2207.226 MHz, CPU Physical cores: 12, Host memory: 16677 MB
+#-----------------------------------------------------------
+source HDMI_Demo.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/perinze/code/fpga/SEA/Examples/FPGA-IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/perinze/code/fpga/video_final/HDMI_Demo.srcs/utils_1/imports/synth_1/HDMI_Demo.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/perinze/code/fpga/video_final/HDMI_Demo.srcs/utils_1/imports/synth_1/HDMI_Demo.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top HDMI_Demo -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 888299
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'frame_irq', assumed default net type 'wire' [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:117]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1946.230 ; gain = 369.770 ; free physical = 2947 ; free virtual = 6512
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2911.918; parent = 1949.203; children = 962.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'HDMI_Demo' [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/rgb2dvi_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/rgb2dvi_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Driver_HDMI' [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Driver_HDMI.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_HDMI' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Driver_HDMI.v:24]
+INFO: [Synth 8-6157] synthesizing module 'Video_Generator' [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Video_Generator.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Video_Generator.v:64]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Video_Generator' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Video_Generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'video_coord_converter' [/home/perinze/code/chisel/verilog/Video_Filter/video_coord_converter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'video_coord_converter' (0#1) [/home/perinze/code/chisel/verilog/Video_Filter/video_coord_converter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'video_filter' [/home/perinze/code/chisel/verilog/Video_Filter/video_filter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'video_filter' (0#1) [/home/perinze/code/chisel/verilog/Video_Filter/video_filter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_Demo' [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Driver_UART' [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:24]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:84]
+	Parameter CLKS_PER_BIT bound to: 86 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:84]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_UART' (0#1) [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/Driver_UART.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Demo' (0#1) [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:118]
+INFO: [Synth 8-6157] synthesizing module 'ila_1' [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/ila_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ila_1' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/.Xil/Vivado-887468-PDArch/realtime/ila_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'HDMI_Demo' (0#1) [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_color'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/Video_Generator.v:64]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Video_Generator0'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:81]
+WARNING: [Synth 8-3848] Net clk_100MHz_System in module/entity UART_Demo does not have driver. [/home/perinze/code/fpga/SEA/Examples/FPGA/2.Community-Interface/UART/UART_Demo/UART_Demo.srcs/sources_1/new/UART_Demo.v:35]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'UART_Demo0'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:108]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_set'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:118]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'video_filter0'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:97]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'video_coord_converter0'. This will prevent further optimization [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/sources_1/new/HDMI_Demo.v:89]
+WARNING: [Synth 8-7129] Port clk_100MHz in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rst in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port En_Rx in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[30] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[29] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[28] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[27] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[26] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[25] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[24] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[23] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[22] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[21] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[20] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[19] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[18] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[17] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[16] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[15] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[14] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[13] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[12] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[11] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[10] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[9] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[8] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[7] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[6] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[5] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[4] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[3] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[2] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[1] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Baud_Rate[0] in module Driver_UART is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk_100MHz in module UART_Demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module Video_Generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB_VDE in module Video_Generator is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2020.168 ; gain = 443.707 ; free physical = 3040 ; free virtual = 6610
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2982.887; parent = 2020.172; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2035.012 ; gain = 458.551 ; free physical = 3032 ; free virtual = 6608
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2997.730; parent = 2035.016; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2035.012 ; gain = 458.551 ; free physical = 3030 ; free virtual = 6608
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2997.730; parent = 2035.016; children = 962.715
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2040.949 ; gain = 0.000 ; free physical = 3030 ; free virtual = 6597
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi'
+Finished Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi'
+Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_10'
+Finished Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_10'
+Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'Video_Generator0/ila_color'
+Finished Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'Video_Generator0/ila_color'
+Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/ila_1/ila_1/ila_1_in_context.xdc] for cell 'ila_set'
+Finished Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/ila_1/ila_1/ila_1_in_context.xdc] for cell 'ila_set'
+Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/perinze/code/fpga/video_final/HDMI_Demo.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HDMI_Demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HDMI_Demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.762 ; gain = 0.000 ; free physical = 2932 ; free virtual = 6499
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.762 ; gain = 0.000 ; free physical = 2929 ; free virtual = 6497
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 3011 ; free virtual = 6569
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 3010 ; free virtual = 6570
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_100MHz. (constraint file  /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for rgb2dvi. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_10. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Video_Generator0/ila_color. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ila_set. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 3008 ; free virtual = 6566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2991 ; free virtual = 6555
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   3 Input   32 Bit       Adders := 2     
+	   3 Input   13 Bit       Adders := 2     
+	   5 Input   12 Bit       Adders := 1     
+	   4 Input   12 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 10    
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port clk_100MHz in module UART_Demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module Video_Generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RGB_VDE in module Video_Generator is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2964 ; free virtual = 6527
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1422.748; parent = 1193.980; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2817 ; free virtual = 6392
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.409; parent = 1280.753; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2810 ; free virtual = 6391
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2802 ; free virtual = 6380
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2863 ; free virtual = 6436
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2863 ; free virtual = 6438
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2860 ; free virtual = 6439
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2854 ; free virtual = 6437
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2843 ; free virtual = 6429
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2842 ; free virtual = 6430
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ila_0         |         1|
+|2     |clk_wiz_0     |         1|
+|3     |rgb2dvi_0     |         1|
+|4     |ila_1         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |ila     |     2|
+|4     |rgb2dvi |     1|
+|5     |BUFG    |     1|
+|6     |CARRY4  |    52|
+|7     |LUT1    |   216|
+|8     |LUT2    |   158|
+|9     |LUT3    |    42|
+|10    |LUT4    |    39|
+|11    |LUT5    |    41|
+|12    |LUT6    |    81|
+|13    |MUXF7   |    24|
+|14    |FDRE    |   143|
+|15    |IBUF    |     1|
+|16    |OBUF    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2858 ; free virtual = 6430
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1507.737; parent = 1281.081; children = 228.768
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3125.465; parent = 2162.750; children = 962.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2194.762 ; gain = 458.551 ; free physical = 2897 ; free virtual = 6476
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2194.762 ; gain = 618.301 ; free physical = 2895 ; free virtual = 6476
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.762 ; gain = 0.000 ; free physical = 2888 ; free virtual = 6471
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2194.762 ; gain = 0.000 ; free physical = 2971 ; free virtual = 6548
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 4403a960
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 2194.762 ; gain = 874.457 ; free physical = 3178 ; free virtual = 6749
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint '/home/perinze/code/fpga/video_final/HDMI_Demo.runs/synth_1/HDMI_Demo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file HDMI_Demo_utilization_synth.rpt -pb HDMI_Demo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 27 14:54:45 2023...

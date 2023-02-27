@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Feb 27 14:54:57 2023
+# Process ID: 890868
+# Current directory: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/impl_1
+# Command line: vivado -log HDMI_Demo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source HDMI_Demo.tcl -notrace
+# Log file: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/impl_1/HDMI_Demo.vdi
+# Journal file: /home/perinze/code/fpga/video_final/HDMI_Demo.runs/impl_1/vivado.jou
+# Running On: PDArch, OS: Linux, CPU Frequency: 2210.001 MHz, CPU Physical cores: 12, Host memory: 16677 MB
+#-----------------------------------------------------------
+source HDMI_Demo.tcl -notrace

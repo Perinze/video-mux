@@ -1,0 +1,1345 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Mon Feb 27 15:04:28 2023
+| Host         : PDArch running 64-bit Arch Linux
+| Command      : report_methodology -file HDMI_Demo_methodology_drc_routed.rpt -pb HDMI_Demo_methodology_drc_routed.pb -rpx HDMI_Demo_methodology_drc_routed.rpx
+| Design       : HDMI_Demo
+| Device       : xc7s15ftgb196-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 260
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 65         |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 11         |
+| TIMING-16 | Warning          | Large setup violation                              | 177        |
+| TIMING-18 | Warning          | Missing input or output delay                      | 1          |
+| ULMTCS-1  | Warning          | Control Sets use limits recommend reduction        | 1          |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects        | 1          |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock clk_10/inst/clk_in1 is defined downstream of clock sys_clk_pin and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_clk_wiz_0 and sys_clk_pin are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_clk_wiz_0 and sys_clk_pin are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks sys_clk_pin]
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/frame_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/h_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/state_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/w_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/x_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin UART_Demo0/y_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock clk_10/inst/clk_in1 is created on an inappropriate internal pin clk_10/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X2Y9 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X3Y8 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X2Y11 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X3Y10 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X2Y13 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X3Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X4Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[3] in site SLICE_X4Y10 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X1Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X0Y13 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X0Y11 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -10.013 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -10.029 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -10.195 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][257]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -10.357 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][274]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -10.387 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][259]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -10.403 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -10.429 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][270]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -10.439 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -10.444 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -10.525 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -10.551 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -10.561 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][254]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -10.565 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][260]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -10.590 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][258]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -10.604 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -10.614 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -10.619 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][262]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -10.629 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][266]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -10.637 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -10.639 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -10.674 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -10.682 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][271]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -10.687 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -10.739 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][268]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -10.740 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][265]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -10.750 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][253]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -10.768 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -10.769 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -10.807 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -10.812 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][273]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -10.818 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -10.838 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][252]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -10.847 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][255]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -10.869 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][275]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -10.879 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][263]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -10.895 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -10.942 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][269]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -10.956 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -10.957 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -10.969 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][261]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -11.059 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -11.080 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][267]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -11.132 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -11.312 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[12].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -2.127 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][192]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -2.163 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -2.336 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -2.597 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][204]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -2.706 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -2.707 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][205]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -2.714 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -2.761 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][207]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -2.882 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -2.917 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][206]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -2.920 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][195]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -2.933 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -2.937 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][210]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -2.959 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -2.961 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][208]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -2.967 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][194]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -2.973 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -3.019 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][193]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -3.056 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -3.070 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -3.086 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -3.098 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -3.128 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -3.129 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][215]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -3.166 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][211]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -3.196 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][212]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -3.207 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -3.208 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -3.211 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][199]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -3.250 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][198]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -3.267 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][209]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -3.279 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -3.306 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][202]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -3.320 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][201]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -3.341 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -3.346 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][214]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -3.350 ns between Driver_HDMI0/Set_Y_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -3.356 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -3.399 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][200]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -3.408 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -3.439 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -3.452 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][203]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -3.505 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -3.545 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[8].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -3.548 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][213]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -3.624 ns between Driver_HDMI0/Set_Y_reg[5]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[9].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -3.684 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][197]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -3.700 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][196]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -5.482 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[13].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -5.525 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][276]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -6.520 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -6.623 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -6.926 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -6.946 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -7.067 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -7.176 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -7.188 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -7.272 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -7.284 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -7.330 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -7.360 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -7.365 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -7.412 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -7.413 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -7.444 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[5]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -7.466 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -7.494 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOut_1_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -7.494 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[7]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -7.517 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/pDataOut_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -7.676 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -7.746 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/pDataOut_1_reg[6]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -8.037 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/n1d_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -8.269 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -8.288 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/n1d_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -8.342 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -8.347 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][217]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -8.354 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][216]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#122 Warning
+Large setup violation  
+There is a large setup violation of -8.355 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#123 Warning
+Large setup violation  
+There is a large setup violation of -8.374 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][219]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#124 Warning
+Large setup violation  
+There is a large setup violation of -8.411 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][220]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#125 Warning
+Large setup violation  
+There is a large setup violation of -8.486 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#126 Warning
+Large setup violation  
+There is a large setup violation of -8.559 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][218]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#127 Warning
+Large setup violation  
+There is a large setup violation of -8.582 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/n1d_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#128 Warning
+Large setup violation  
+There is a large setup violation of -8.617 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[10].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#129 Warning
+Large setup violation  
+There is a large setup violation of -8.786 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/n1d_1_reg[0]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#130 Warning
+Large setup violation  
+There is a large setup violation of -8.795 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/n1d_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#131 Warning
+Large setup violation  
+There is a large setup violation of -8.835 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/n1d_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#132 Warning
+Large setup violation  
+There is a large setup violation of -9.118 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/n1d_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#133 Warning
+Large setup violation  
+There is a large setup violation of -9.137 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/n1d_1_reg[1]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#134 Warning
+Large setup violation  
+There is a large setup violation of -9.155 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[0].DataEncoder/n1d_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#135 Warning
+Large setup violation  
+There is a large setup violation of -9.196 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[1].DataEncoder/n1d_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#136 Warning
+Large setup violation  
+There is a large setup violation of -9.409 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/n1d_1_reg[2]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#137 Warning
+Large setup violation  
+There is a large setup violation of -9.596 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][233]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#138 Warning
+Large setup violation  
+There is a large setup violation of -9.612 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][251]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#139 Warning
+Large setup violation  
+There is a large setup violation of -9.642 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#140 Warning
+Large setup violation  
+There is a large setup violation of -9.647 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][235]_srl8_srlopt/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#141 Warning
+Large setup violation  
+There is a large setup violation of -9.666 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][250]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#142 Warning
+Large setup violation  
+There is a large setup violation of -9.674 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#143 Warning
+Large setup violation  
+There is a large setup violation of -9.684 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and rgb2dvi/U0/DataEncoders[2].DataEncoder/n1d_1_reg[3]/D (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#144 Warning
+Large setup violation  
+There is a large setup violation of -9.697 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#145 Warning
+Large setup violation  
+There is a large setup violation of -9.715 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][234]_srl8_srlopt/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#146 Warning
+Large setup violation  
+There is a large setup violation of -9.715 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][247]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#147 Warning
+Large setup violation  
+There is a large setup violation of -9.739 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][229]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#148 Warning
+Large setup violation  
+There is a large setup violation of -9.748 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#149 Warning
+Large setup violation  
+There is a large setup violation of -9.752 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][241]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#150 Warning
+Large setup violation  
+There is a large setup violation of -9.756 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][244]_srl8_srlopt/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#151 Warning
+Large setup violation  
+There is a large setup violation of -9.767 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#152 Warning
+Large setup violation  
+There is a large setup violation of -9.786 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#153 Warning
+Large setup violation  
+There is a large setup violation of -9.801 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#154 Warning
+Large setup violation  
+There is a large setup violation of -9.813 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#155 Warning
+Large setup violation  
+There is a large setup violation of -9.813 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#156 Warning
+Large setup violation  
+There is a large setup violation of -9.813 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#157 Warning
+Large setup violation  
+There is a large setup violation of -9.817 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][230]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#158 Warning
+Large setup violation  
+There is a large setup violation of -9.825 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#159 Warning
+Large setup violation  
+There is a large setup violation of -9.828 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#160 Warning
+Large setup violation  
+There is a large setup violation of -9.838 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][228]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#161 Warning
+Large setup violation  
+There is a large setup violation of -9.840 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#162 Warning
+Large setup violation  
+There is a large setup violation of -9.841 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#163 Warning
+Large setup violation  
+There is a large setup violation of -9.849 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][249]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#164 Warning
+Large setup violation  
+There is a large setup violation of -9.854 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][239]_srl8_srlopt/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#165 Warning
+Large setup violation  
+There is a large setup violation of -9.856 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][236]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#166 Warning
+Large setup violation  
+There is a large setup violation of -9.871 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#167 Warning
+Large setup violation  
+There is a large setup violation of -9.878 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][237]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#168 Warning
+Large setup violation  
+There is a large setup violation of -9.883 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][245]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#169 Warning
+Large setup violation  
+There is a large setup violation of -9.886 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#170 Warning
+Large setup violation  
+There is a large setup violation of -9.892 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][243]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#171 Warning
+Large setup violation  
+There is a large setup violation of -9.911 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#172 Warning
+Large setup violation  
+There is a large setup violation of -9.911 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#173 Warning
+Large setup violation  
+There is a large setup violation of -9.947 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][238]_srl8_srlopt/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#174 Warning
+Large setup violation  
+There is a large setup violation of -9.950 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[11].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#175 Warning
+Large setup violation  
+There is a large setup violation of -9.956 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][231]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#176 Warning
+Large setup violation  
+There is a large setup violation of -9.965 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][242]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#177 Warning
+Large setup violation  
+There is a large setup violation of -9.986 ns between Driver_HDMI0/Set_X_reg[0]/C (clocked by clk_out1_clk_wiz_0) and Video_Generator0/ila_color/inst/ila_core_inst/shifted_data_in_reg[7][246]_srl8/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on uart_rx relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+ULMTCS-1#1 Warning
+Control Sets use limits recommend reduction  
+This design uses 199 control sets (vs. available limit of 2000, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '2' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: /home/perinze/code/fpga/video_final/HDMI_Demo.gen/sources_1/ip/rgb2dvi_0/src/rgb2dvi.xdc (Line: 5)
+Related violations: <none>
+
+
